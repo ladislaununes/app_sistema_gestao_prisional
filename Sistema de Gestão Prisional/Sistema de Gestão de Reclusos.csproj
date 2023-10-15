@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EC0769B8-6E91-41A4-8195-D87523AA5AA7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sistema_de_Gestão_Prisional</RootNamespace>
+    <AssemblyName>Sistema de Gestão Prisional</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
+    <Reference Include="Bunifu.UI.WinForms.1.5.3">
+      <HintPath>..\..\..\..\..\Downloads\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton">
+      <HintPath>..\..\..\..\..\Downloads\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin">
+      <HintPath>..\..\..\..\..\Downloads\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroSet UI">
+      <HintPath>..\..\..\..\..\Downloads\MetroSetUI 2.0 Dlls\net45\MetroSet UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BD.cs" />
+    <Compile Include="FM_CadTransferencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FM_CadTransferencia.Designer.cs">
+      <DependentUpon>FM_CadTransferencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FM_ConsultProcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FM_ConsultProcesso.Designer.cs">
+      <DependentUpon>FM_ConsultProcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FM_CadFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FM_CadFuncionario.Designer.cs">
+      <DependentUpon>FM_CadFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FM_CadRecluso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FM_CadRecluso.Designer.cs">
+      <DependentUpon>FM_CadRecluso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FM_CadPenitenciaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FM_CadPenitenciaria.Designer.cs">
+      <DependentUpon>FM_CadPenitenciaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FM_ConsultFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FM_ConsultFuncionario.Designer.cs">
+      <DependentUpon>FM_ConsultFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FM_ConsultRecluso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FM_ConsultRecluso.Designer.cs">
+      <DependentUpon>FM_ConsultRecluso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FM_ConsultPenitenciaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FM_ConsultPenitenciaria.Designer.cs">
+      <DependentUpon>FM_ConsultPenitenciaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FM_ConsultTransferencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FM_ConsultTransferencia.Designer.cs">
+      <DependentUpon>FM_ConsultTransferencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FM_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FM_Login.Designer.cs">
+      <DependentUpon>FM_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FM_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FM_Menu.Designer.cs">
+      <DependentUpon>FM_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FM_Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FM_Splash.Designer.cs">
+      <DependentUpon>FM_Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FM_Menu.aa.resx">
+      <DependentUpon>FM_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FM_CadTransferencia.resx">
+      <DependentUpon>FM_CadTransferencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FM_ConsultProcesso.resx">
+      <DependentUpon>FM_ConsultProcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FM_CadFuncionario.resx">
+      <DependentUpon>FM_CadFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FM_CadRecluso.resx">
+      <DependentUpon>FM_CadRecluso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FM_CadPenitenciaria.resx">
+      <DependentUpon>FM_CadPenitenciaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FM_ConsultFuncionario.resx">
+      <DependentUpon>FM_ConsultFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FM_ConsultRecluso.resx">
+      <DependentUpon>FM_ConsultRecluso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FM_ConsultPenitenciaria.resx">
+      <DependentUpon>FM_ConsultPenitenciaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FM_ConsultTransferencia.resx">
+      <DependentUpon>FM_ConsultTransferencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="FM_Login.resx">
+      <DependentUpon>FM_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FM_Menu.resx">
+      <DependentUpon>FM_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FM_Splash.resx">
+      <DependentUpon>FM_Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
